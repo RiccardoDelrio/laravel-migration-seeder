@@ -10,7 +10,7 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::table('user', function (Blueprint $table) {
+        Schema::table('trains', function (Blueprint $table) {
             $table->string('azienda');
             $table->string('stazione_partenza');
             $table->string('stazione_arrivo');
@@ -24,12 +24,9 @@ return new class extends Migration {
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::table('user', function (Blueprint $table) {
+        Schema::table('trains', function (Blueprint $table) {
             $table->dropColumn('azienda');
             $table->dropColumn('stazione_partenza');
             $table->dropColumn('stazione_arrivo');
